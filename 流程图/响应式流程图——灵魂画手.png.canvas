@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"082a7ab9d40adddd","x":-125,"y":-30,"width":250,"height":60,"type":"text","text":""},
+		{"id":"e50098212fb283c0","x":-124,"y":121,"width":250,"height":60,"type":"text","text":"容器存储依赖（effect）"},
+		{"id":"7d887755caa4f9d2","x":-124,"y":-30,"width":250,"height":60,"type":"text","text":"const user = reactive({age:1})"},
+		{"id":"27abc09cff7a034a","x":-913,"y":-561,"width":621,"height":591,"type":"file","file":"min-vue3/reactivity.md"},
+		{"id":"fd5eb82741267805","x":401,"y":-77,"width":250,"height":107,"type":"text","text":"effect(()=>{\n\tuser.age = user.age + 1\n})"},
+		{"id":"43dea14fa99fffdb","x":401,"y":89,"width":250,"height":60,"type":"text","text":"执行effect中fn，触发响应式对象user.age -> get()"},
+		{"id":"b2b34d802ceb02c6","x":207,"y":-30,"width":76,"height":60,"type":"text","text":"get()"},
+		{"id":"e9b90090e80358e5","x":401,"y":-648,"width":777,"height":400,"type":"file","file":"min-vue3/effect.md"},
+		{"id":"d285e3d64b668359","x":-124,"y":351,"width":250,"height":60,"type":"text","text":"取出容器依赖effect"},
+		{"id":"d0e1754f8c36f320","x":445,"y":351,"width":178,"height":60,"type":"text","text":"执行依赖中的fn"},
+		{"id":"48eecc8823a4fcb2","x":227,"y":291,"width":93,"height":60,"type":"text","text":"set（）"},
+		{"id":"c0ba2c67d4f319b0","x":-35,"y":673,"width":636,"height":400,"type":"file","file":"min-vue3/如何触发依赖？.md"}
+	],
+	"edges":[
+		{"id":"0c1fd1d605996930","fromNode":"7d887755caa4f9d2","fromSide":"bottom","toNode":"e50098212fb283c0","toSide":"top"},
+		{"id":"3195774bccaa550f","fromNode":"7d887755caa4f9d2","fromSide":"left","toNode":"27abc09cff7a034a","toSide":"right"},
+		{"id":"ed8ee8c303221e9b","fromNode":"fd5eb82741267805","fromSide":"bottom","toNode":"43dea14fa99fffdb","toSide":"top"},
+		{"id":"39561d39086ce704","fromNode":"43dea14fa99fffdb","fromSide":"bottom","toNode":"7d887755caa4f9d2","toSide":"top"},
+		{"id":"cc041406237efb15","fromNode":"fd5eb82741267805","fromSide":"top","toNode":"e9b90090e80358e5","toSide":"bottom"},
+		{"id":"a53669a14ffd3d74","fromNode":"d285e3d64b668359","fromSide":"right","toNode":"d0e1754f8c36f320","toSide":"left"},
+		{"id":"dca46925e718cc20","fromNode":"d285e3d64b668359","fromSide":"bottom","toNode":"c0ba2c67d4f319b0","toSide":"top"},
+		{"id":"614e098151e1956c","fromNode":"d0e1754f8c36f320","fromSide":"bottom","toNode":"c0ba2c67d4f319b0","toSide":"top"}
+	]
+}
